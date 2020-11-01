@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog post</title>
+</head>
+<body>
+<header id="header">
+    <div class="header-items">
+        <h1>Blog Post</h1>
+        <p>Create articles and add them to favorites</p>
+        <button class="btn btn-lg btn-secondary header-start" id="btn-start">Start</button>
+    </div>
+</header>
+
+<section>
+    <ul class="tabs nav nav-tabs col-lg-6 col-md-8 col-sm-10 mx-auto" id="navigation">
+        <li class="nav-item "><a class="nav-link tab" data-name="posts" href="#">Posts</a></li>
+        <li class="nav-item "><a class="nav-link active tab disabled" data-name="create" href="#" >Create</a></li>
+        <li class="nav-item "><a class="nav-link tab" data-name="favorite" href="#">Favorite</a></li>
+        <li class="icon"><i class="fa fa-bars"></i></li>
+    </ul>
+
+
+    <div class="loader-wrap hide" id="loader">
+        <div class="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="tab-content" class="tab-content col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+        <div id="posts" class="hide">
+        </div>
+
+        <form id="create" class="needs-validation" novalidate>
+            <h4 class="text-center">Create new post</h4>
+
+            <div class="form-group">
+                <label for="title">Name:</label>
+                <input value="" type="text" class="form-control" name="title" id="title" placeholder="enter title"
+                       required>
+                <div class="invalid-feedback">The tittle must not be empty</div>
+            </div>
+
+            <div class="form-group">
+                <label for="fulltext">Text:</label>
+                <textarea name="fulltext" class="form-control" minlength="10" id="fulltext" rows="4"
+                          placeholder="Enter post text" required></textarea>
+                <div class="invalid-feedback">The text must be minimum 10 characters</div>
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select name="type" class="form-control" id="type">
+                    <option>note</option>
+                    <option>news</option>
+                </select>
+            </div>
+
+            <button class="btn btn-info" type="submit">Create</button>
+
+        </form>
+
+        <div id="favorite" class="favorite hide">
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
