@@ -1,2 +1,2 @@
 # js-blog-post
-blog-post by plain JS
+blog-post via plain JS
